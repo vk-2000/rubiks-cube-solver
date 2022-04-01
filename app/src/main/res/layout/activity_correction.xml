@@ -4,15 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CorrectionActivity"
-    android:orientation="vertical">
+    android:background="@color/primary_bg"
+    android:orientation="vertical"
+    tools:context=".CorrectionActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="TextView" />
+        android:gravity="center"
+        android:text="Check the cube"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp" />
 
     <LinearLayout
         android:id="@+id/colorsContainer"
@@ -95,5 +99,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="Solve" />
+        android:backgroundTint="@color/secondary_bg"
+        android:text="Solve"
+        android:textColor="#FFFFFF"
+        app:rippleColor="@color/ripple_color" />
 </LinearLayout>

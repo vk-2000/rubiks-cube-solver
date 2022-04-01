@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="1"
+    android:background="@color/primary_bg"
     tools:context=".ScanActivity">
 
     <LinearLayout
@@ -19,6 +20,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="TextView"
+            android:textColor="#FFFFFF"
             android:textSize="34sp" />
 
         <LinearLayout
@@ -31,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:orientation="vertical"/>
+                android:orientation="vertical" />
         </LinearLayout>
 
         <Button
@@ -39,7 +41,11 @@
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="1"
-            android:text="Scan" />
+            android:backgroundTint="@color/secondary_bg"
+            android:text="Scan"
+            android:textColor="#FFFFFF"
+            app:iconTint="#FFFFFF"
+            app:rippleColor="@color/ripple_color" />
     </LinearLayout>
 
 </RelativeLayout>

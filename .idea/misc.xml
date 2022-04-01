@@ -3,14 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/RubiksCube/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.24537037037037038" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/RubiksCube/app/src/main/res/drawable/border_radius.xml" value="0.24537037037037038" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/RubiksCube/app/src/main/res/drawable/box.xml" value="0.24537037037037038" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/RubiksCube/app/src/main/res/drawable/cube_cell.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/RubiksCube/app/src/main/res/drawable/cube_face.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/RubiksCube/app/src/main/res/drawable/ic_icon_logo_background.xml" value="0.24537037037037038" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/RubiksCube/app/src/main/res/drawable/ic_launcher_background.xml" value="0.24537037037037038" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/RubiksCube/app/src/main/res/drawable/transparent_background.xml" value="0.24537037037037038" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/RubiksCube/app/src/main/res/layout/activity_camera.xml" value="0.25" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/RubiksCube/app/src/main/res/layout/activity_correction.xml" value="0.25" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/RubiksCube/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/RubiksCube/app/src/main/res/layout/activity_scan.xml" value="0.25" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/RubiksCube/app/src/main/res/layout/activity_solve.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/RubiksCube/app/src/main/res/layout/activity_start.xml" value="0.25" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/RubiksCube/app/src/main/res/layout/layout.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/RubiksCube/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.24537037037037038" />
       </map>
     </option>
   </component>

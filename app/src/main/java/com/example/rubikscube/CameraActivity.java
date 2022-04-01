@@ -133,32 +133,32 @@ public class CameraActivity extends AppCompatActivity {
             Log.d("width", "onPictureTaken: " + resized.getWidth());
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             resized.compress(Bitmap.CompressFormat.JPEG, 90, out);
-            saveImage(out.toByteArray());
+//            saveImage(out.toByteArray());
             Bitmap decoded = BitmapFactory.decodeStream(new ByteArrayInputStream(out.toByteArray()));
             analyzeImage(decoded);
-            sendScan();
+            returnScan();
 
         }
     };
 
-    private void saveImage(byte[] data) {
-        File pictureFile = getOutputMediaFile();
-        if (pictureFile == null){
-            Log.d("aaa", "Error creating media file, check storage permissions");
-            return;
-        }
-
-        try {
-            FileOutputStream fos = new FileOutputStream(pictureFile);
-            fos.write(data);
-            fos.close();
-            mCamera.startPreview();
-        } catch (FileNotFoundException e) {
-            Log.d("bbb", "File not found: " + e.getMessage());
-        } catch (IOException e) {
-            Log.d("ccc", "Error accessing file: " + e.getMessage());
-        }
-    }
+//    private void saveImage(byte[] data) {
+//        File pictureFile = getOutputMediaFile();
+//        if (pictureFile == null){
+//            Log.d("aaa", "Error creating media file, check storage permissions");
+//            return;
+//        }
+//
+//        try {
+//            FileOutputStream fos = new FileOutputStream(pictureFile);
+//            fos.write(data);
+//            fos.close();
+//            mCamera.startPreview();
+//        } catch (FileNotFoundException e) {
+//            Log.d("bbb", "File not found: " + e.getMessage());
+//        } catch (IOException e) {
+//            Log.d("ccc", "Error accessing file: " + e.getMessage());
+//        }
+//    }
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
     private void analyzeImage(Bitmap bitmap) {
@@ -207,7 +207,7 @@ public class CameraActivity extends AppCompatActivity {
         return (r*r + g*g + b*b) <= threshold*threshold;
     }
 
-    private void sendScan() {
+    private void returnScan() {
         Intent returnIntent = new Intent();
         Bundle bundle = new Bundle();
         rotate90Clockwise(colorsArray);
@@ -229,26 +229,26 @@ public class CameraActivity extends AppCompatActivity {
             }
     }
 
-    private File getOutputMediaFile(){
-        // To be safe, you should check that the SDCard is mounted
-        // using Environment.getExternalStorageState() before doing this.
-
-        String state = Environment.getExternalStorageState();
-        if(!state.equals(Environment.MEDIA_MOUNTED)){
-            return null;
-        }
-
-        File mediaStorageDir = new File(getExternalFilesDir(null) + "/" + "cubes");
-        Log.d("fjile", "getOutputMediaFile: " + mediaStorageDir.getPath());
-        // This location works best if you want the created images to be shared
-        // between applications and persist after your app has been uninstalled.
-        // Create the storage directory if it does not exist
-        if (! mediaStorageDir.exists()){
-            mediaStorageDir.mkdirs();
-        }
-
-        // Create a media file name
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        return new File(mediaStorageDir.getPath() + File.separator + "IMG_"+ timeStamp + ".jpg");
-    }
+//    private File getOutputMediaFile(){
+//        // To be safe, you should check that the SDCard is mounted
+//        // using Environment.getExternalStorageState() before doing this.
+//
+//        String state = Environment.getExternalStorageState();
+//        if(!state.equals(Environment.MEDIA_MOUNTED)){
+//            return null;
+//        }
+//
+//        File mediaStorageDir = new File(getExternalFilesDir(null) + "/" + "cubes");
+//        Log.d("fjile", "getOutputMediaFile: " + mediaStorageDir.getPath());
+//        // This location works best if you want the created images to be shared
+//        // between applications and persist after your app has been uninstalled.
+//        // Create the storage directory if it does not exist
+//        if (! mediaStorageDir.exists()){
+//            mediaStorageDir.mkdirs();
+//        }
+//
+//        // Create a media file name
+//        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+//        return new File(mediaStorageDir.getPath() + File.separator + "IMG_"+ timeStamp + ".jpg");
+//    }
 }

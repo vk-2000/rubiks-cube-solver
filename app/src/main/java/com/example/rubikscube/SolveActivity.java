@@ -26,7 +26,7 @@ public class SolveActivity extends AppCompatActivity {
     private TextView txtMove;
     private Button btnNext;
     private Button btnPrev;
-    private int moveIndex = 0;
+    private int moveIndex = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,17 +95,31 @@ public class SolveActivity extends AppCompatActivity {
         txtMove.setText("Start");
 
         btnNext.setOnClickListener(view -> {
-            if(moveIndex >= solution.length) return;
+            moveIndex++;
+            if(moveIndex >= solution.length){
+                moveIndex = solution.length - 1;
+                return;
+            }
             txtMove.setText(solution[moveIndex]);
             cube2DView.makeMove(solution[moveIndex]);
-            moveIndex++;
+
+
+
         });
 
         btnPrev.setOnClickListener(view -> {
-            if(moveIndex == 0) return;
-            moveIndex--;
-            txtMove.setText(solution[moveIndex]);
+
+
+            if(moveIndex == -1){
+                return;
+            }
             cube2DView.makeMoveReverse(solution[moveIndex]);
+            moveIndex--;
+            if(moveIndex == -1){
+                txtMove.setText("Start");
+                return;
+            }
+            txtMove.setText(solution[moveIndex]);
 
         });
     }
